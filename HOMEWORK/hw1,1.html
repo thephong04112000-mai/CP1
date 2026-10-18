@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Mua Sắm - CSS Grid</title>
+  <style>
+    /* Cấu hình chung */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Khung chứa danh sách sản phẩm sử dụng CSS Grid đáp ứng */
+    .shop-container {
+      display: grid;
+      /* Tự động co giãn số cột dựa trên kích thước màn hình, mỗi cột tối thiểu 200px */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; /* Khoảng cách giữa các sản phẩm */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Định nghĩa lớp CSS cho từng thẻ sản phẩm */
+    .product-card {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .product-price {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .btn-cart {
+      background-color: #ffffff;
+      color: #333;
+      border: 1px solid #333;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .btn-cart:hover {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Danh Sách Sản Phẩm</h1>
+
+  <div class="shop-container">
+    <!-- Sản phẩm 1 -->
+    <div class="product-card">
+      <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Ba lô" class="product-image">
+      <div class="product-title">Fjallraven - Foldsack No. 1 Backpack</div>
+      <div class="product-price">Price: $109.95</div>
+      <button class="btn-cart">Add to cart</button>
+    </div>
+
+    <!-- Sản phẩm 2 -->
+    <div class="product-card">
+      <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="Áo thun" class="product-image">
+      <div class="product-title">Mens Casual Premium Slim T-Shirts</div>
+      <div class="product-price">Price: $22.3</div>
+      <button class="btn-cart">Add to cart</button>
+    </div>
+
+    <!-- Sản phẩm 3 -->
+    <div class="product-card">
+      <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="Áo khoác" class="product-image">
+      <div class="product-title">Mens Cotton Jacket</div>
+      <div class="product-price">Price: $55.99</div>
+      <button class="btn-cart">Add to cart</button>
+    </div>
+
+    <!-- Sản phẩm 4 -->
+    <div class="product-card">
+      <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="Áo tay dài" class="product-image">
+      <div class="product-title">Mens Casual Slim Fit</div>
+      <div class="product-price">Price: $15.99</div>
+      <button class="btn-cart">Add to cart</button>
+    </div>
+
+    <!-- Sản phẩm 5 -->
+    <div class="product-card">
+      <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" alt="Nhẫn" class="product-image">
+      <div class="product-title">John Hardy Women's Legends Naga Gold</div>
+      <div class="product-price">Price: $695</div>
+      <button class="btn-cart">Add to cart</button>
+    </div>
+  </div>
+
+</body>
+</html>

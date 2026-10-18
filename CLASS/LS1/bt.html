@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            /*grid-template-columns: auto auto;*/
+            /*grid-template-columns: repeat(5,1fr);*/
+            grid-template-columns: auto auto auto;
+            border: 4px solid black;
+            /*row-gap: 20px;*/
+            /*column-gap: 100px;*/
+        }
+        .box1,.box6,.box8{
+            border: 1px solid black;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .box2,.box3,.box4,.box7,.box9{
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+        <div class="box9">9</div>
+
+    </div>
+</body>
+</html>
